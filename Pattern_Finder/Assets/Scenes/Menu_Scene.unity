@@ -191,7 +191,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 796447820}
+      - m_Target: {fileID: 796447821}
         m_MethodName: Back
         m_Mode: 1
         m_Arguments:
@@ -320,8 +320,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868536454}
-        m_MethodName: Play
+      - m_Target: {fileID: 1868536449}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868536454}
+      - m_Target: {fileID: 1868536455}
         m_MethodName: Back
         m_Mode: 1
         m_Arguments:
@@ -740,7 +740,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1868536454}
+      - m_Target: {fileID: 880559700}
         m_MethodName: LevelSelect
         m_Mode: 1
         m_Arguments:
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 796447819}
   - component: {fileID: 796447818}
   - component: {fileID: 796447817}
-  - component: {fileID: 796447820}
+  - component: {fileID: 796447821}
   m_Layer: 5
   m_Name: Canvas Options
   m_TagString: Untagged
@@ -970,7 +970,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &796447820
+--- !u!114 &796447821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 796447815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7200bc1457d8414ba55ea95a70f7e8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 43d1c24503428494d92299513ef41567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 880559694}
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 880559698}
   - component: {fileID: 880559697}
   - component: {fileID: 880559696}
-  - component: {fileID: 880559699}
+  - component: {fileID: 880559700}
   m_Layer: 5
   m_Name: Canvas Start
   m_TagString: Untagged
@@ -1089,7 +1089,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &880559699
+--- !u!114 &880559700
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 880559694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7200bc1457d8414ba55ea95a70f7e8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 43d1c24503428494d92299513ef41567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 880559694}
@@ -1183,7 +1183,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 880559699}
+      - m_Target: {fileID: 880559700}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 880559699}
+      - m_Target: {fileID: 880559700}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -2028,7 +2028,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 880559699}
+      - m_Target: {fileID: 880559700}
         m_MethodName: Options
         m_Mode: 1
         m_Arguments:
@@ -2397,7 +2397,7 @@ GameObject:
   - component: {fileID: 1868536453}
   - component: {fileID: 1868536452}
   - component: {fileID: 1868536451}
-  - component: {fileID: 1868536454}
+  - component: {fileID: 1868536455}
   m_Layer: 5
   m_Name: Canvas Level Selection
   m_TagString: Untagged
@@ -2487,7 +2487,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1868536454
+--- !u!114 &1868536455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2496,7 +2496,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1868536449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7200bc1457d8414ba55ea95a70f7e8a, type: 3}
+  m_Script: {fileID: 11500000, guid: 43d1c24503428494d92299513ef41567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 880559694}
