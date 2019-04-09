@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -31,7 +31,7 @@ public class TimerLevel : MonoBehaviour
             {
                 --m_secondCount;
                 // Change text of the timerText
-                timerText.text = "Time left : " +m_secondCount.ToString();
+                timerText.text = "Time left : " + m_secondCount.ToString();
             }
 
             m_currentTime = 0.0f;
