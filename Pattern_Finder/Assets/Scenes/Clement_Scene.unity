@@ -224,7 +224,7 @@ Transform:
   - {fileID: 2092565865}
   - {fileID: 1786316856}
   m_Father: {fileID: 1598945689}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &144859202
 GameObject:
@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 144859203}
   - component: {fileID: 144859205}
   - component: {fileID: 144859204}
+  - component: {fileID: 144859206}
   m_Layer: 5
   m_Name: Door3
   m_TagString: Untagged
@@ -300,6 +301,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144859202}
   m_CullTransparentMesh: 0
+--- !u!114 &144859206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144859202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1a23bf693b9b47aab23b11d2fca56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  door: {fileID: 0}
+  image: {r: 0, g: 0, b: 0, a: 0}
+  imageOpen: {r: 0, g: 1, b: 0, a: 1}
+  imageClose: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &200242528
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +395,7 @@ GameObject:
   - component: {fileID: 208383912}
   - component: {fileID: 208383914}
   - component: {fileID: 208383913}
+  - component: {fileID: 208383915}
   m_Layer: 5
   m_Name: Door2
   m_TagString: Untagged
@@ -416,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -440,6 +459,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208383911}
   m_CullTransparentMesh: 0
+--- !u!114 &208383915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208383911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1a23bf693b9b47aab23b11d2fca56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  door: {fileID: 0}
+  image: {r: 0, g: 0, b: 0, a: 0}
+  imageOpen: {r: 0, g: 1, b: 0, a: 1}
+  imageClose: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &230598312
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +731,7 @@ GameObject:
   - component: {fileID: 510498565}
   - component: {fileID: 510498567}
   - component: {fileID: 510498566}
+  - component: {fileID: 510498568}
   m_Layer: 5
   m_Name: Door1
   m_TagString: Untagged
@@ -758,6 +795,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510498564}
   m_CullTransparentMesh: 0
+--- !u!114 &510498568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510498564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1a23bf693b9b47aab23b11d2fca56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  door: {fileID: 0}
+  image: {r: 0, g: 0, b: 0, a: 0}
+  imageOpen: {r: 0, g: 1, b: 0, a: 1}
+  imageClose: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &545277506
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,6 +1048,7 @@ GameObject:
   - component: {fileID: 651396931}
   - component: {fileID: 651396933}
   - component: {fileID: 651396932}
+  - component: {fileID: 651396934}
   m_Layer: 5
   m_Name: Door5
   m_TagString: Untagged
@@ -1057,6 +1112,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 651396930}
   m_CullTransparentMesh: 0
+--- !u!114 &651396934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651396930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1a23bf693b9b47aab23b11d2fca56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  door: {fileID: 0}
+  image: {r: 0, g: 0, b: 0, a: 0}
+  imageOpen: {r: 0, g: 1, b: 0, a: 1}
+  imageClose: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &682402097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,14 +1273,14 @@ RectTransform:
   m_GameObject: {fileID: 710746290}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.27000013, y: 0.032625016, z: 0.435}
+  m_LocalScale: {x: 0.23663823, y: 0.02859379, z: 0.38125}
   m_Children: []
-  m_Father: {fileID: 1091626955}
-  m_RootOrder: 8
+  m_Father: {fileID: 1617481278}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 154.4, y: 180.9}
+  m_AnchoredPosition: {x: 135.32182, y: 158.65662}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710746292
@@ -1960,14 +2032,14 @@ RectTransform:
   m_GameObject: {fileID: 858799285}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.27000013, y: 0.032625016, z: 0.435}
+  m_LocalScale: {x: 0.23663823, y: 0.02859379, z: 0.38125}
   m_Children: []
-  m_Father: {fileID: 1091626955}
-  m_RootOrder: 7
+  m_Father: {fileID: 1617481278}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118.4, y: 180.89996}
+  m_AnchoredPosition: {x: 103.77009, y: 158.65659}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858799287
@@ -2034,14 +2106,14 @@ RectTransform:
   m_GameObject: {fileID: 880623389}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.27000013, y: 0.032625016, z: 0.435}
+  m_LocalScale: {x: 0.23663823, y: 0.02859379, z: 0.38125}
   m_Children: []
-  m_Father: {fileID: 1091626955}
-  m_RootOrder: 9
+  m_Father: {fileID: 1617481278}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 191.39996, y: 180.9}
+  m_AnchoredPosition: {x: 167.74994, y: 158.65662}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880623391
@@ -2581,8 +2653,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091626954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -400.00003, y: -225.28734, z: 0}
-  m_LocalScale: {x: 2.2988503, y: 2.2988503, z: 2.2988503}
+  m_LocalPosition: {x: -400.00006, y: -225.28734, z: 0}
+  m_LocalScale: {x: 2.2988505, y: 2.2988505, z: 2.2988505}
   m_Children:
   - {fileID: 510498565}
   - {fileID: 208383912}
@@ -2591,12 +2663,8 @@ Transform:
   - {fileID: 651396931}
   - {fileID: 2095648539}
   - {fileID: 2106286916}
-  - {fileID: 858799286}
-  - {fileID: 710746291}
-  - {fileID: 880623390}
-  - {fileID: 1509038240}
   m_Father: {fileID: 1598945689}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1103883072
 GameObject:
@@ -2609,6 +2677,7 @@ GameObject:
   - component: {fileID: 1103883073}
   - component: {fileID: 1103883075}
   - component: {fileID: 1103883074}
+  - component: {fileID: 1103883076}
   m_Layer: 5
   m_Name: Door4
   m_TagString: Untagged
@@ -2672,6 +2741,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103883072}
   m_CullTransparentMesh: 0
+--- !u!114 &1103883076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103883072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1a23bf693b9b47aab23b11d2fca56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  door: {fileID: 0}
+  image: {r: 0, g: 0, b: 0, a: 0}
+  imageOpen: {r: 0, g: 1, b: 0, a: 1}
+  imageClose: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1202898159
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,7 +2981,7 @@ Transform:
   - {fileID: 79898773}
   - {fileID: 1040325892}
   m_Father: {fileID: 1598945689}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1365006475
 GameObject:
@@ -3279,14 +3365,14 @@ RectTransform:
   m_GameObject: {fileID: 1509038239}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.27000013, y: 0.032625016, z: 0.435}
+  m_LocalScale: {x: 0.23663823, y: 0.02859379, z: 0.38125}
   m_Children: []
-  m_Father: {fileID: 1091626955}
-  m_RootOrder: 10
+  m_Father: {fileID: 1617481278}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228.4, y: 180.9}
+  m_AnchoredPosition: {x: 200.17813, y: 158.65662}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1509038241
@@ -3491,11 +3577,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 328955606}
-  - {fileID: 1091626955}
   - {fileID: 1333846690}
   - {fileID: 85497328}
-  - {fileID: 1915990448}
+  - {fileID: 1091626955}
   - {fileID: 2062491178}
+  - {fileID: 1915990448}
   - {fileID: 1590411836}
   - {fileID: 1365006476}
   m_Father: {fileID: 0}
@@ -3506,6 +3592,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1617481277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617481278}
+  m_Layer: 0
+  m_Name: DoorTemplate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1617481278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617481277}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 858799286}
+  - {fileID: 710746291}
+  - {fileID: 880623390}
+  - {fileID: 1509038240}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1645431003
 GameObject:
   m_ObjectHideFlags: 0
@@ -3747,7 +3867,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1786316858}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 510498568}
+        m_MethodName: DoorOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1058066926}
+        m_MethodName: ButtonActivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1786316858
@@ -4083,7 +4225,7 @@ Transform:
   - {fileID: 605909864}
   - {fileID: 1202898160}
   m_Father: {fileID: 1598945689}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062491177
 GameObject:
@@ -4120,7 +4262,7 @@ Transform:
   - {fileID: 1722348055}
   - {fileID: 1058066923}
   m_Father: {fileID: 1598945689}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2092565864
 GameObject:
@@ -4199,7 +4341,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2092565867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2106286919}
+        m_MethodName: DoorOpen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 755845852}
+        m_MethodName: ButtonActivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2092565867
@@ -4250,6 +4414,7 @@ GameObject:
   - component: {fileID: 2095648539}
   - component: {fileID: 2095648541}
   - component: {fileID: 2095648540}
+  - component: {fileID: 2095648542}
   m_Layer: 5
   m_Name: Door6
   m_TagString: Untagged
@@ -4289,7 +4454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4313,6 +4478,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095648538}
   m_CullTransparentMesh: 0
+--- !u!114 &2095648542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095648538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1a23bf693b9b47aab23b11d2fca56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  door: {fileID: 0}
+  image: {r: 0, g: 0, b: 0, a: 0}
+  imageOpen: {r: 0, g: 1, b: 0, a: 1}
+  imageClose: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &2106286915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4324,6 +4506,7 @@ GameObject:
   - component: {fileID: 2106286916}
   - component: {fileID: 2106286918}
   - component: {fileID: 2106286917}
+  - component: {fileID: 2106286919}
   m_Layer: 5
   m_Name: Door7
   m_TagString: Untagged
@@ -4363,7 +4546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4387,6 +4570,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106286915}
   m_CullTransparentMesh: 0
+--- !u!114 &2106286919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106286915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa1a23bf693b9b47aab23b11d2fca56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  door: {fileID: 0}
+  image: {r: 0, g: 0, b: 0, a: 0}
+  imageOpen: {r: 0, g: 1, b: 0, a: 1}
+  imageClose: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &2143007091
 GameObject:
   m_ObjectHideFlags: 0
