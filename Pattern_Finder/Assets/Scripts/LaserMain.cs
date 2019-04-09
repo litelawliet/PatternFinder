@@ -48,27 +48,7 @@ public class LaserMain : MonoBehaviour
                 }
             }
         }
-
-        if (Time.time > lastTime)
-        {
-            for (int j = 1; j < posNb; ++j)
-            {
-                float distance = Vector3.Distance(m_hitPoints[j - 1], m_hitPoints[j]);
-
-                for (float x = 0; x < distance; x += 0.01f)
-                {
-                    Vector3 pointA = m_hitPoints[j - 1];
-                    Vector3 pointB = m_hitPoints[j];
-
-                    Vector3 finalPoint = (x * Vector3.Normalize(pointB - pointA)) + pointA;
-                    m_lineRenderer.positionCount = j + 1;
-                    m_lineRenderer.SetPosition(j, finalPoint);
-                }
-
-                //m_lineRenderer.SetPositions(m_hitPoints);
-            }
-
-            lastTime = Time.time + 0.1f;
-        }
+        m_lineRenderer.positionCount = posNb;
+        m_lineRenderer.SetPositions(m_hitPoints);
     }
 }
