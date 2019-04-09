@@ -4,32 +4,19 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
-    private bool rotate;
-    private GameObject mirror;
+    [SerializeField] private bool rotate;
+    [SerializeField] private GameObject mirror;
+
     void Start()
     {
         mirror = this.gameObject;
 
-        if (mirror.transform.rotation.z == 90)
-        {
-            rotate = true;
-        }
-        if (mirror.transform.rotation.z == 0)
-        {
-            rotate = false;
-        }
+        rotate = mirror.transform.rotation.eulerAngles.z == 90 ? true : mirror.transform.rotation.eulerAngles.z == 0 ? false : true;
     }
 
     void Update()
     {
-        if (rotate == true)
-        {
-            mirror.transform.eulerAngles = new Vector3(0, 0, 90);
-        }
-        if (rotate == false)
-        {
-            mirror.transform.eulerAngles = new Vector3(0, 0, 0);
-        }
+        mirror.transform.eulerAngles = rotate ? new Vector3(0, 0, 90) : new Vector3(0, 0, 0);
     }
 
     public void ButtonActivate()
