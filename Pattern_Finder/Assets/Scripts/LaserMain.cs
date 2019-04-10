@@ -44,6 +44,12 @@ public class LaserMain : MonoBehaviour
                 }
             }
         }
+
+        if (turnedOn)
+            m_lineRenderer.enabled = true;
+        else
+            m_lineRenderer.enabled = false;
+
         m_lineRenderer.positionCount = posNb;
         m_lineRenderer.SetPositions(m_hitPoints);
     }
