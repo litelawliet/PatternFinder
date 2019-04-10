@@ -10,14 +10,15 @@ public class OpenCloseDoor : MonoBehaviour
     [SerializeField] private Color image;
     [SerializeField] private Color imageOpen = Color.green;
     [SerializeField] private Color imageClose = Color.black;
-    void Start()
+
+    private void Start()
     {
         door = gameObject;
         image = door.GetComponent<Image>().color;
         open = image == imageOpen || !(image == imageClose);
     }
-    
-    void Update()
+
+    private void Update()
     {
         door.GetComponent<Image>().color = open ? imageOpen : imageClose;
     }
