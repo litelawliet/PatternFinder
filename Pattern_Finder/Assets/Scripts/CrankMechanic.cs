@@ -5,19 +5,24 @@ using UnityEngine;
 public class CrankMechanic : MonoBehaviour
 {
 
-    [SerializeField] private GameObject m_crankGameObject;
+    [SerializeField] private string m_crankTag = "";
+
+    private GameObject m_crankGameObject;
     private Vector3 m_angleVectorWithCrank;
     private float m_baseAngle;
 
-    void Update()
+    private void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
-                m_crankGameObject = hit.collider.gameObject;
-                m_baseAngle = Vector3.Angle((Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)) - m_crankGameObject.transform.position).normalized, m_crankGameObject.transform.up.normalized);
+                if(hit.collider.gameObject.CompareTag(m_crankTag))
+                {
+                    m_crankGameObject = hit.collider.gameObject;
+                    m_baseAngle = Vector3.Angle((Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)) - m_crankGameObject.transform.position).normalized, m_crankGameObject.transform.up.normalized);
+                }
             }
         }
         if(Input.GetMouseButton(0))
@@ -37,9 +42,17 @@ public class CrankMechanic : MonoBehaviour
                 float dotProduct = Vector3.Dot(finalVector, m_crankGameObject.transform.up);
 
                 if(dotProduct > 0)
+                {
                     m_crankGameObject.transform.Rotate(0, 0, Angle - m_baseAngle);
+                    m_crankGameObject.GetComponent<Crank>().ResultAngle += Angle - m_baseAngle;
+                }
                 if(dotProduct < 0)
+                {
                     m_crankGameObject.transform.Rotate(0, 0, -(Angle - m_baseAngle));
+                    m_crankGameObject.GetComponent<Crank>().ResultAngle += -(Angle - m_baseAngle);
+                }
+
+
 
             }
         }
