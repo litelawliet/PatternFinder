@@ -5,15 +5,13 @@ public class LaserMain : MonoBehaviour
     private LineRenderer m_lineRenderer;
     private Vector3[] m_hitPoints;
     private Vector3[] m_hitNormals;
-    private float m_lastTime;
-    [SerializeField] private Transform laserStart;
+    [SerializeField] private Transform laserStart = null;
 
     public bool turnedOn;
     public int posNb;
 
     private void Start()
     {
-        m_lastTime = 0;
         posNb = 1;
         m_hitPoints = new Vector3[10];
         m_hitNormals = new Vector3[10];

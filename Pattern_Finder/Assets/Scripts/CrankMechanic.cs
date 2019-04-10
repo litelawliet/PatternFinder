@@ -6,13 +6,8 @@ public class CrankMechanic : MonoBehaviour
 {
 
     [SerializeField] private GameObject m_crankGameObject;
-    private Vector3 angleVectorWithCrank;
-    private float BaseAngle;
-
-    void Start()
-    {
-        
-    }
+    private Vector3 m_angleVectorWithCrank;
+    private float m_baseAngle;
 
     void Update()
     {
@@ -22,8 +17,7 @@ public class CrankMechanic : MonoBehaviour
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
                 m_crankGameObject = hit.collider.gameObject;
-
-                BaseAngle = Vector3.Angle((Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)) - m_crankGameObject.transform.position).normalized, m_crankGameObject.transform.up.normalized);
+                m_baseAngle = Vector3.Angle((Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10)) - m_crankGameObject.transform.position).normalized, m_crankGameObject.transform.up.normalized);
             }
         }
         if(Input.GetMouseButton(0))
@@ -35,12 +29,18 @@ public class CrankMechanic : MonoBehaviour
                 Vector3 MousePosScreen = Camera.main.ScreenToWorldPoint(Mousepos);
 
 
-                angleVectorWithCrank = MousePosScreen - m_crankGameObject.transform.position;
-                angleVectorWithCrank.Normalize();
-                float Angle = Vector3.Angle(angleVectorWithCrank, m_crankGameObject.transform.up.normalized);
+                m_angleVectorWithCrank = MousePosScreen - m_crankGameObject.transform.position;
+                m_angleVectorWithCrank.Normalize();
+                Vector3 finalVector = Quaternion.Euler(0, 0, -90) * m_angleVectorWithCrank;
 
-                if(Angle > BaseAngle)
-                    m_crankGameObject.transform.Rotate(0, 0, Mathf.Abs(BaseAngle - Angle));
+                float Angle = Vector3.Angle(m_angleVectorWithCrank, m_crankGameObject.transform.up.normalized);
+                float dotProduct = Vector3.Dot(finalVector, m_crankGameObject.transform.up);
+
+                if(dotProduct > 0)
+                    m_crankGameObject.transform.Rotate(0, 0, Angle - m_baseAngle);
+                if(dotProduct < 0)
+                    m_crankGameObject.transform.Rotate(0, 0, -(Angle - m_baseAngle));
+
             }
         }
         if(Input.GetMouseButtonUp(0))
