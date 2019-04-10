@@ -11,6 +11,10 @@ public class CrankMechanic : MonoBehaviour
     private Vector3 m_angleVectorWithCrank;
     private float m_baseAngle;
 
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     private void Update()
     {
         if(Input.GetMouseButtonDown(0))
