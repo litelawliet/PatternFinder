@@ -21,6 +21,7 @@ public class Door : MonoBehaviour
     private void Update()
     {
         DoorPos = open ? DoorOpen : DoorClose;
+        gameObject.transform.position = DoorPos;
     }
 
     public void DoorActivate()
