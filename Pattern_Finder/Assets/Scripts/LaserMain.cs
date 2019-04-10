@@ -5,15 +5,14 @@ public class LaserMain : MonoBehaviour
     private LineRenderer m_lineRenderer;
     private Vector3[] m_hitPoints;
     private Vector3[] m_hitNormals;
-    private float m_lastTime;
-    [SerializeField] private Transform laserStart;
+    [SerializeField] private Transform laserStart = null;
+    [SerializeField] private string ReflectionTag = "";
 
     public bool turnedOn;
     public int posNb;
 
     private void Start()
     {
-        m_lastTime = 0;
         posNb = 1;
         m_hitPoints = new Vector3[10];
         m_hitNormals = new Vector3[10];
@@ -22,6 +21,8 @@ public class LaserMain : MonoBehaviour
 
     private void Update()
     {
+        m_hitPoints = new Vector3[10];
+        m_hitNormals = new Vector3[10];
 
         m_hitPoints[0] = laserStart.position;
         m_hitNormals[0] = laserStart.right;
@@ -31,9 +32,17 @@ public class LaserMain : MonoBehaviour
         {
             if (Physics.Raycast(m_hitPoints[i], m_hitNormals[i], out RaycastHit lineHit))
             {
-                m_hitNormals[i + 1] = m_hitNormals[i] - (Vector3.Dot(2 * m_hitNormals[i], lineHit.normal) / lineHit.normal.magnitude * lineHit.normal.magnitude) * lineHit.normal;
-                m_hitPoints[i + 1] = lineHit.point;
-                posNb++;
+                if(lineHit.collider.gameObject.CompareTag(ReflectionTag))
+                {
+                    m_hitNormals[i + 1] = m_hitNormals[i] - (Vector3.Dot(2 * m_hitNormals[i], lineHit.normal) / lineHit.normal.magnitude * lineHit.normal.magnitude) * lineHit.normal;
+                    m_hitPoints[i + 1] = lineHit.point;
+                    posNb++;
+                }
+                else
+                {
+                    m_hitPoints[i + 1] = lineHit.point;
+                    posNb++;
+                }
             }
             else
             {
@@ -44,6 +53,12 @@ public class LaserMain : MonoBehaviour
                 }
             }
         }
+
+        if (turnedOn)
+            m_lineRenderer.enabled = true;
+        else
+            m_lineRenderer.enabled = false;
+
         m_lineRenderer.positionCount = posNb;
         m_lineRenderer.SetPositions(m_hitPoints);
     }
