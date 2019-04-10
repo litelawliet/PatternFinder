@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,14 +9,15 @@ public class Rotate : MonoBehaviour
     [SerializeField] private bool rotate;
     [SerializeField] private GameObject mirror;
 
-    void Start()
+    private void Start()
     {
-        mirror = this.gameObject;
+        mirror = gameObject;
 
-        rotate = mirror.transform.rotation.eulerAngles.z == rotatedAngle ? true : !(mirror.transform.rotation.eulerAngles.z == 0);
+        var rotation = mirror.transform.rotation;
+        rotate = Math.Abs(rotation.eulerAngles.z - rotatedAngle) < 0.1f || Math.Abs(rotation.eulerAngles.z) > 0.1f;
     }
 
-    void Update()
+    private void Update()
     {
         mirror.transform.eulerAngles = rotate ? new Vector3(0, 0, rotatedAngle) : new Vector3(0, 0, 0);
     }
