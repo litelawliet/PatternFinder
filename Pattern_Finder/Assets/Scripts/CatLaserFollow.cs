@@ -10,6 +10,8 @@ public class CatLaserFollow : MonoBehaviour
     [SerializeField] private Transform targetTransform = null;
     [SerializeField] private float     catSpeed        = 3.0f;
     private                  Vector3   m_direction;
+    private                  float     m_distance;
+    float                              m_wallDistance = 0.0f;
 
     private void Update()
     {
@@ -18,16 +20,14 @@ public class CatLaserFollow : MonoBehaviour
         m_direction = new Vector3(targetPosition.x - catPosition.x, targetPosition.y - catPosition.y, 0.0f);
 
         RaycastHit hit;
-        float      distance     = m_direction.magnitude;
-        float      wallDistance = 0.0f;
+        m_distance = m_direction.magnitude;
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(m_direction), out hit, Mathf.Infinity))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(m_direction) * hit.distance, Color.yellow);
-            Debug.Log("Following...");
-            wallDistance = Vector3.Distance(hit.point, catPosition);
+            m_wallDistance = Vector3.Distance(hit.point, catPosition);
 
-            if (distance < wallDistance)
+            if (m_distance < m_wallDistance)
             {
                 transform.Translate(m_direction.normalized * catSpeed * Time.deltaTime);
             }
