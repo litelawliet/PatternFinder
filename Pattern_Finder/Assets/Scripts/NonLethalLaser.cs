@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class NonLethalLaser : MonoBehaviour
 {
-    [SerializeField] private Transform pos;
-    [SerializeField] private Collider coll;
-    [SerializeField] private Rigidbody laserLight;
-    [SerializeField] private GameObject laserPointer;
+    [SerializeField] private string NameOfLaser = "";
 
     [Range(0, 0.1f)]
     [SerializeField] private float speed = 0;
 
-    [SerializeField] GameObject Xcrank;
-    [SerializeField] GameObject Ycrank;
+    [SerializeField] GameObject Xcrank = null;
+    [SerializeField] GameObject Ycrank = null;
 
+    private GameObject laserPointer;
+    
     private void Start()
     {
-        laserPointer = GameObject.Find("LaserPointer");
-        coll = GameObject.FindGameObjectWithTag("Ground").GetComponent<Collider>();
+        laserPointer = GameObject.Find(NameOfLaser);
     }
     private void Update()
     {
@@ -36,8 +34,6 @@ public class NonLethalLaser : MonoBehaviour
             {
                 laserPointer.GetComponent<MeshRenderer>().enabled = false;
             }
-
-            laserPointer.AddComponent<Crank>();
         }
     }
 
