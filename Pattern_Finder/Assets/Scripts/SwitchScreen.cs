@@ -11,39 +11,55 @@ public class SwitchScreen : MonoBehaviour
     private GameObject levelSelect;
     [SerializeField]
     private GameObject options;
+    Animator animStart;
+    Animator animOptions;
+    Animator animLevel;
+    public static GameObject currentCanvas;
 
     public void Start()
     {
-        start.SetActive(true);
-        levelSelect.SetActive(false);
-        options.SetActive(false);
+        animStart = start.GetComponent<Animator>();
+        animOptions = options.GetComponent<Animator>();
+        animLevel = levelSelect.GetComponent<Animator>();
+        Debug.Log(currentCanvas);
     }
 
     public void Play()
     {
+        animStart.SetTrigger("SwitchStart");
         SceneManager.LoadScene("Level1_Scene");
     }
+
     public void Quit()
     {
         Application.Quit();
+        Debug.Log("Quit");
     }
 
     public void Options()
     {
-        options.SetActive(true);
-        start.SetActive(false);
+        animStart.SetTrigger("SwitchStart");
+        animOptions.SetTrigger("SwitchOptions");
+        currentCanvas = options;
+        options.GetComponent<Canvas>().sortingOrder = 3;
+        Debug.Log(currentCanvas.name);
     }
 
     public void LevelSelect()
     {
-        start.SetActive(false);
-        levelSelect.SetActive(true);
+        animStart.SetTrigger("SwitchStart");
+        animLevel.SetTrigger("SwitchLevel");
+        currentCanvas = levelSelect;
+        levelSelect.GetComponent<Canvas>().sortingOrder = 3;
+        Debug.Log(currentCanvas.name);
     }
 
     public void Back()
     {
-        options.SetActive(false);
-        levelSelect.SetActive(false);
-        start.SetActive(true);
+        name = currentCanvas.name;
+        currentCanvas.GetComponent<Animator>().SetTrigger("Switch" + name + "Reverse");
+        animStart.SetTrigger("SwitchStartReverse");
+        options.GetComponent<Canvas>().sortingOrder = 0;
+        levelSelect.GetComponent<Canvas>().sortingOrder = 1;
     }
 }
