@@ -62,4 +62,9 @@ public class LaserMain : MonoBehaviour
         m_lineRenderer.positionCount = posNb;
         m_lineRenderer.SetPositions(m_hitPoints);
     }
+
+    public void TurnOn()
+    {
+        turnedOn = !turnedOn;
+    }
 }
