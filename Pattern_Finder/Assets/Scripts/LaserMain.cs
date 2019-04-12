@@ -48,6 +48,10 @@ public class LaserMain : MonoBehaviour
                         //VICTORY EVENT
                         Debug.Log("Victory !");
                         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                        if (SceneManager.GetActiveScene().buildIndex == 2)
+                        {
+                            SceneManager.LoadScene("Menu_Scene");
+                        }
                     }
                 }
                 else
@@ -69,10 +73,11 @@ public class LaserMain : MonoBehaviour
         if (turnedOn)
         {
             m_lineRenderer.enabled = true;
-            FindObjectOfType<AudioManager>().Play("Laser");
         }
         else
+        {
             m_lineRenderer.enabled = false;
+        }
 
         m_lineRenderer.positionCount = posNb;
         m_lineRenderer.SetPositions(m_hitPoints);
