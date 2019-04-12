@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LaserMain : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class LaserMain : MonoBehaviour
                 {
                     if(lineHit.collider.gameObject.CompareTag("Cat"))
                     {
+                        //VICTORY EVENT
                         Debug.Log("Victory !");
                     }
                 }
