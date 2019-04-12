@@ -47,6 +47,7 @@ public class LaserMain : MonoBehaviour
                     {
                         //VICTORY EVENT
                         Debug.Log("Victory !");
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     }
                 }
                 else

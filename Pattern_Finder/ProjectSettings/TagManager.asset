@@ -9,6 +9,7 @@ TagManager:
   - mirror
   - Mirror
   - Wall
+  - Cat
   layers:
   - Default
   - TransparentFX

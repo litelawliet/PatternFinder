@@ -1686,6 +1686,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserRay
       objectReference: {fileID: 0}
+    - target: {fileID: 1024675077784315727, guid: 72ff3b032307d754ebb924727536b774,
+        type: 3}
+      propertyPath: laserStart
+      value: 
+      objectReference: {fileID: 1788130019}
+    - target: {fileID: 1024675077784315727, guid: 72ff3b032307d754ebb924727536b774,
+        type: 3}
+      propertyPath: ReflectionTag
+      value: Mirror
+      objectReference: {fileID: 0}
     - target: {fileID: 1024675077784315728, guid: 72ff3b032307d754ebb924727536b774,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1740,16 +1750,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1024675077784315727, guid: 72ff3b032307d754ebb924727536b774,
-        type: 3}
-      propertyPath: laserStart
-      value: 
-      objectReference: {fileID: 1788130019}
-    - target: {fileID: 1024675077784315727, guid: 72ff3b032307d754ebb924727536b774,
-        type: 3}
-      propertyPath: ReflectionTag
-      value: Mirror
       objectReference: {fileID: 0}
     - target: {fileID: 1024675077784315726, guid: 72ff3b032307d754ebb924727536b774,
         type: 3}
@@ -9391,6 +9391,11 @@ PrefabInstance:
     - target: {fileID: 4258446854310982913, guid: a1659c47b8deb8f4bae92643114c302c,
         type: 3}
       propertyPath: m_Name
+      value: Cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258446854310982913, guid: a1659c47b8deb8f4bae92643114c302c,
+        type: 3}
+      propertyPath: m_TagString
       value: Cat
       objectReference: {fileID: 0}
     - target: {fileID: 4258446854310982918, guid: a1659c47b8deb8f4bae92643114c302c,

@@ -30,7 +30,7 @@ public class SwitchScreen : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("MenuButton");
         m_animStart.SetTrigger(SwitchStart);
-        SceneManager.LoadScene("Level1_Scene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Quit()
