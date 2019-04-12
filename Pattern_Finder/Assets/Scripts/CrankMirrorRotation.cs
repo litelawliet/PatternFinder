@@ -14,7 +14,7 @@ public class CrankMirrorRotation : MonoBehaviour
     {
         if (mirrorToRotate != null)
         {
-            mirrorTransform = mirrorToRotate.transform.GetChild(0).transform;
+            mirrorTransform = mirrorToRotate.transform;
         }
 
         if (crankAssociated != null)
