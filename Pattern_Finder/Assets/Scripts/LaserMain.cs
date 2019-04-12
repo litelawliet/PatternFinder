@@ -38,6 +38,13 @@ public class LaserMain : MonoBehaviour
                     m_hitPoints[i + 1] = lineHit.point;
                     posNb++;
                 }
+                else if(lineHit.collider.isTrigger)
+                {
+                    if(lineHit.collider.gameObject.CompareTag("Cat"))
+                    {
+                        Debug.Log("Victory !");
+                    }
+                }
                 else
                 {
                     m_hitPoints[i + 1] = lineHit.point;
