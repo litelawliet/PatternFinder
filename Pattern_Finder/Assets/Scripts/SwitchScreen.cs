@@ -28,17 +28,20 @@ public class SwitchScreen : MonoBehaviour
 
     public void Play()
     {
+        FindObjectOfType<AudioManager>().Play("MenuButton");
         m_animStart.SetTrigger(SwitchStart);
         SceneManager.LoadScene("Level1_Scene");
     }
 
     public void Quit()
     {
+        FindObjectOfType<AudioManager>().Play("MenuButton");
         Application.Quit();
     }
 
     public void Options()
     {
+        FindObjectOfType<AudioManager>().Play("MenuButton");
         m_animStart.SetTrigger(SwitchStart);
         m_animOptions.SetTrigger(SwitchOptions);
         m_currentCanvas = options;
@@ -48,6 +51,7 @@ public class SwitchScreen : MonoBehaviour
 
     public void LevelSelect()
     {
+        FindObjectOfType<AudioManager>().Play("MenuButton");
         m_animStart.SetTrigger(SwitchStart);
         m_animLevel.SetTrigger(SwitchLevel);
         m_currentCanvas = levelSelect;
@@ -57,6 +61,7 @@ public class SwitchScreen : MonoBehaviour
 
     public void Back()
     {
+        FindObjectOfType<AudioManager>().Play("MenuButton");
         name = m_currentCanvas.name;
         m_currentCanvas.GetComponent<Animator>().SetTrigger("Switch" + name + "Reverse");
         m_animStart.SetTrigger(SwitchStartReverse);
