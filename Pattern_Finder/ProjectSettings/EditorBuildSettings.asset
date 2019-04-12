@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Menu_Scene.unity
+    guid: 3989042ff99c09641a1476c73456b95f
+  - enabled: 0
+    path: Assets/Scenes/Clement_Scene.unity
+    guid: 7935bc0a37dc8f545820091d0ff05817
+  - enabled: 1
+    path: Assets/Scenes/Clement_Scene2.unity
+    guid: 4c1d8d26ca47aa94ab9483e4bad249d7
+  - enabled: 1
+    path: Assets/Scenes/Clement_Scene3_Lvl2.unity
+    guid: eacab92a56d81a64ebbd44b5e77d2881
   m_configObjects: {}
