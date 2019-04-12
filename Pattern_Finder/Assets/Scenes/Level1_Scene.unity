@@ -126,7 +126,6 @@ GameObject:
   - component: {fileID: 36997532}
   m_Layer: 5
   m_Name: RotatingMirror4
-  m_Name: RotatingMirror1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72471d0ba4916f3429648d17becf5d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotatedAngle: 90
   rotate: 0
   mirror: {fileID: 36997530}
 --- !u!114 &36997533
@@ -777,7 +777,6 @@ GameObject:
   - component: {fileID: 556738004}
   m_Layer: 5
   m_Name: Door2
-  m_Name: Door1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -997,7 +996,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &682402100
@@ -1272,6 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72471d0ba4916f3429648d17becf5d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotatedAngle: 90
   rotate: 0
   mirror: {fileID: 755845848}
 --- !u!1 &801797130
@@ -1427,6 +1426,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 36997532}
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 755845852}
         m_MethodName: ButtonActivate
         m_Mode: 1
@@ -1692,7 +1701,6 @@ GameObject:
   - component: {fileID: 869729961}
   m_Layer: 5
   m_Name: Door4
-  m_Name: Door1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2177,7 +2185,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1289883571
@@ -2486,7 +2493,6 @@ GameObject:
   - component: {fileID: 1474454202}
   m_Layer: 5
   m_Name: RotatingMirror3
-  m_Name: RotatingMirror1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2523,6 +2529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72471d0ba4916f3429648d17becf5d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotatedAngle: 90
   rotate: 0
   mirror: {fileID: 1474454200}
 --- !u!114 &1474454203
@@ -2725,7 +2732,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1501882013
@@ -3106,7 +3112,6 @@ GameObject:
   - component: {fileID: 1704377857}
   m_Layer: 5
   m_Name: Door3
-  m_Name: Door1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3182,7 +3187,6 @@ GameObject:
   - component: {fileID: 1765480505}
   m_Layer: 5
   m_Name: RotatingMirror2
-  m_Name: RotatingMirror1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3219,6 +3223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72471d0ba4916f3429648d17becf5d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotatedAngle: 90
   rotate: 0
   mirror: {fileID: 1765480503}
 --- !u!114 &1765480506
@@ -3570,7 +3575,6 @@ GameObject:
   - component: {fileID: 1959982772}
   m_Layer: 5
   m_Name: Door1
-  m_Name: Door1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
