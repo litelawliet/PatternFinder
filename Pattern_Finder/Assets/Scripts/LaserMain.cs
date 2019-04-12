@@ -48,7 +48,7 @@ public class LaserMain : MonoBehaviour
                         //VICTORY EVENT
                         Debug.Log("Victory !");
                         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                        if (SceneManager.GetActiveScene().buildIndex == 2)
+                        if (SceneManager.GetActiveScene().buildIndex == 3)
                         {
                             SceneManager.LoadScene("Menu_Scene");
                         }
