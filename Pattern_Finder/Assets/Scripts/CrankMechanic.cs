@@ -57,6 +57,7 @@ public class CrankMechanic : MonoBehaviour
                     m_crankGameObject.transform.Rotate(0, 0, -(angle - m_baseAngle));
                     m_crankGameObject.GetComponent<Crank>().ResultAngle += -(angle - m_baseAngle);
                 }
+                // ici : sound
             }
         }
         if(Input.GetMouseButtonUp(0))
