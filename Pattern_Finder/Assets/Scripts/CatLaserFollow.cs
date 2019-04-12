@@ -29,6 +29,7 @@ public class CatLaserFollow : MonoBehaviour
 
             if (m_distance < m_wallDistance)
             {
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
                 transform.Translate(m_direction.normalized * catSpeed * Time.deltaTime);
             }
         }

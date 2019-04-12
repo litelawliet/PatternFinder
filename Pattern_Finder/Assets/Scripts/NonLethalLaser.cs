@@ -22,7 +22,7 @@ public class NonLethalLaser : MonoBehaviour
     {
         transform.position = new Vector3(68 -Xcrank.GetComponent<Crank>().ResultAngle * speed, 10 -Ycrank.GetComponent<Crank>().ResultAngle * speed, -240);
         RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.forward, Color.green);
+        //Debug.DrawRay(transform.position, transform.forward, Color.green);
         if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
             if(hit.collider.gameObject.CompareTag("Ground"))
