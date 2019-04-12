@@ -10,6 +10,7 @@ public class CrankMechanic : MonoBehaviour
     private Vector3 m_angleVectorWithCrank;
     private float m_baseAngle;
     private Camera m_camera;
+    private int ran;
 
     private void Start()
     {
@@ -57,7 +58,11 @@ public class CrankMechanic : MonoBehaviour
                     m_crankGameObject.transform.Rotate(0, 0, -(angle - m_baseAngle));
                     m_crankGameObject.GetComponent<Crank>().ResultAngle += -(angle - m_baseAngle);
                 }
-                // ici : sound
+                ran = Random.Range(0, 1);
+                if (ran == 0)
+                    FindObjectOfType<AudioManager>().Play("Crank1");
+                if (ran == 1)
+                    FindObjectOfType<AudioManager>().Play("Crank2");
             }
         }
         if(Input.GetMouseButtonUp(0))

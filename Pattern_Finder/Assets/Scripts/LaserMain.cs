@@ -64,7 +64,10 @@ public class LaserMain : MonoBehaviour
         }
 
         if (turnedOn)
+        {
             m_lineRenderer.enabled = true;
+            FindObjectOfType<AudioManager>().Play("Laser");
+        }
         else
             m_lineRenderer.enabled = false;
 
